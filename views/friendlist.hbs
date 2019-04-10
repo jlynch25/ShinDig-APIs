@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <link rel='stylesheet' href='/stylesheets/friendlist.css' />
+    <script src="/javascripts/friendlist.js"></script>
+
+
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home"><img src="/images/ShinDig_Logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/friendlist">Friends</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/eventlist">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Logout</a>
+          </li>
+        </ul>
+    </div>
+    </div>
+    </nav>
+
+
+    <!-- Page Content -->
+
+    <!-- Add Friends -->
+    <div class="container-fluid" id="heading">
+      <h1>Add Username</h1>
+    </div>
+
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-8">
+          <div class="form-group">
+            <input type="text" class="form-control input-lg" id="username" placeholder="Username">
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Add</button>
+        </div>
+        <div class="col"></div>
+    </div>
+
+    <!-- Friend Requests Sent -->
+    <div class="container-fluid" id="heading">
+      <h2>Requests Sent</h2>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-7" id="friendBlock">
+            <div class="container-fluid">
+              <p id="username">Username</p>
+            </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+
+    <!--  Friend Requests Received-->
+    <div class="container-fluid" id="heading">
+      <h3>Requests Received</h3>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-7" id="friendBlock">
+            <div class="container-fluid">
+              <p id="username">Username</p>
+              <button class="btn btn-primary" type="submit">Accept</button>
+              <button class="btn btn-danger" data-toggle="modal" data-target="#confirmReject">Reject</button>
+            </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+
+    <!-- List of Friends -->
+    <div class="container-fluid" id="heading">
+      <h4>My Friends</h4>
+    </div>
+
+    <div id="friendFeed" class="container-fluid">
+
+    </div>
+
+
+    <!-- Modal for request reject -->
+<div class="modal fade" id="confirmReject" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Are You Sure About That?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to reject this friend request?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" type="submit">Reject</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for remove friend-->
+<div class="modal fade" id="confirmRemove" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Are You Sure About That?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to remove this friend?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" type="submit">Remove</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+
+</html>
